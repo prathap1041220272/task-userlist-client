@@ -1,22 +1,24 @@
-<div fxLayout="row" class="loginMargin">
-  <div fxFlex fxLayout="column">
-    <form fxLayout="column" fxFlexAlign="center" name="signupForm" #signupForm="ngForm" (ngSubmit)="handlesubmit(signupForm)">
-      <h4 fxFlexAlign="center">SIGNUP</h4>
-      <mat-form-field>
-        <input type="text" matInput placeholder="Name" name="name" ngModel required>
-      </mat-form-field>
-      <mat-form-field>
-        <input type="email" matInput placeholder="Email" name="email" ngModel required>
-      </mat-form-field>
-      <mat-form-field>
-        <input type="password" matInput placeholder="password" name="password" minlength="6" ngModel required>
-      </mat-form-field>
-      <mat-form-field>
-        <input type="password" matInput placeholder="conformpassword" name="conformpassword" minlength="6" ngModel required>
-      </mat-form-field>
-      <span>
-        <button mat-raised-button color="primary" [disabled]="signupForm.invalid">Register</button>
-      </span>
-    </form>
+<div class="container margin">
+    <h1 class="text-center col-md-12">SignUp</h1>
+    <div class="col-md-12 d-flex justify-content-center">
+      <form class="col-md-4" #signupForm="ngForm" (ngSubmit)="handlesubmit(signupForm)">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="name" ngModel required placeholder="name">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" name="email" ngModel required aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="password" ngModel required placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="mobile">mobile</label>
+            <input type="tel" class="form-control" id="mobile" name="mobile" ngModel required placeholder="mobile">
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="signupForm.invalid">Submit</button>
+      </form>
+    </div>
   </div>
-</div>

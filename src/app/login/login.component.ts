@@ -24,9 +24,9 @@ export class LoginComponent implements OnInit {
       }, (err) => {
         swal({
           title: 'error!',
-          text: 'login falid',
+          text: 'login failed',
           type: 'error',
-          confirmButtonText: 'checkit'
+          confirmButtonText: 'Ok'
         });
       });
   }

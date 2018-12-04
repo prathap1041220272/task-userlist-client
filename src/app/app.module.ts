@@ -16,6 +16,7 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { MenuComponent } from './menu/menu.component';
 import { ViewComponent } from './view/view.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -56,6 +57,7 @@ const routes: Routes = [
     LoginComponent,
     MenuComponent,
     ViewComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
