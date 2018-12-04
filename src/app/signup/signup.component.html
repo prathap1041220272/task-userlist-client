@@ -1,0 +1,22 @@
+<div fxLayout="row" class="loginMargin">
+  <div fxFlex fxLayout="column">
+    <form fxLayout="column" fxFlexAlign="center" name="signupForm" #signupForm="ngForm" (ngSubmit)="handlesubmit(signupForm)">
+      <h4 fxFlexAlign="center">SIGNUP</h4>
+      <mat-form-field>
+        <input type="text" matInput placeholder="Name" name="name" ngModel required>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="email" matInput placeholder="Email" name="email" ngModel required>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="password" matInput placeholder="password" name="password" minlength="6" ngModel required>
+      </mat-form-field>
+      <mat-form-field>
+        <input type="password" matInput placeholder="conformpassword" name="conformpassword" minlength="6" ngModel required>
+      </mat-form-field>
+      <span>
+        <button mat-raised-button color="primary" [disabled]="signupForm.invalid">Register</button>
+      </span>
+    </form>
+  </div>
+</div>
